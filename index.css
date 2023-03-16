@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/* Le box sizing est conseillé pour que les boites s'ajustent à la taille de l'écran. 
+Vertical align permet de retirer le petit espace entre les boites qui est impossible à retirer */
+
+/* -------------------GLOBAL-------------------- */
+#wrapper {
+    padding: 0 20%;
+    background-color: #F9D30A;
+    font-family: 'Golos Text', sans-serif;
+    width : 100%;
+}
+
+/* Bannière c'est l'ID concernant l'image en bannière des simpsons. Pinaise c'est simplement le titre Oh pinaise en haut */
+
+#banniere,
+h1, #pinaise {
+    width: 100%;
+}
+
+
+
+header,
+nav,
+aside,
+footer,
+a {
+    color: white;
+}
+
+
+
+nav,
+aside {
+    background-color: #4E92D4;
+}
+
+
+
+/* -------------------HEADER-------------------- */
+
+header,
+figure {
+
+    text-align: center;
+    margin: 0% auto;
+
+}
+
+/* S'agit du titre oh pinaise */
+
+#pinaise {
+    background-color: #4E92D4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+    
+}
+
+
+
+
+/* -------------------- Main section ---------------------- */
+
+main {
+
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+
+}
+
+h1 {
+    color: #F9D30A;
+}
+
+p{
+    text-align: justify;
+}
+
+/* -------------------- Menu ---------------------- */
+
+nav {
+
+
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+
+
+}
+
+ul {
+    list-style-type: none;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0;
+
+}
+
+li{
+    margin : 5px auto;
+}
+
+/* -------------------- Article sur Matt ---------------------- */
+
+article {
+
+    width: 60%;
+    margin: 30px auto;
+
+}
+
+
+
+aside {
+    text-align: center;
+    margin: 10px 10px 50px 10px;
+    padding: 10px 5px;
+    width: 20%;
+
+}
+
+figcaption {
+
+    margin: 5px;
+    margin-bottom: 5px;
+    text-align: justify;
+
+}
+
+
+
+#mattPhoto {
+    width: 90%;
+    border: 1px solid white;
+    margin-top: 10px;
+}
+
+
+/* -------------------- Pied de page ---------------------- */
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    background-color: #2E6EAD;
+    padding: 10px;
+    margin: auto;
+}
+
+
+
+
+/* Media querie pour un tel portable. Le but n'est pas de recopier le CSS mais de simplement indiquer les changements. Utiliser l'inspecteur pour check. */
+
+@media only screen and (max-width: 768px) {
+
+    #wrapper {
+        padding : 0%;
+       
+    }
+
+    /* Main : Modification du main en flex direction column pour que les éléments soient l'un en dessous de l'autre */
+
+    main {
+        
+        flex-direction : column;
+        align-items: center;
+            
+    }
+
+    /* Menu : Modification du NAV pour que l'affichage se fasse en Row classique. */
+
+    nav {
+        width : 100%;
+        margin : 10px auto;
+    }
+
+    ul {
+
+        display : flex;   
+        margin : auto ;  
+        
+    }
+
+    li{
+        margin : auto ;
+        font-weight: bold;
+        }
+
+    a{
+        
+        padding : 5px;
+    }
+
+    /* Article sur Matt : Modification de la taille */
+
+    aside {
+
+        width: 60%;
+        margin : 0 0 40px 0;
+    
+    }
+
+    article {
+
+        width: 90%;
+       
+    
+    } 
+
+    #mattPhoto {
+        width: 80%;
+       
+    }
+
+  
+  
+  
+}
+
+@media only screen and (max-width: 437px) {
+
+    ul {
+
+        flex-direction : column;          
+        
+    }
+
+}
